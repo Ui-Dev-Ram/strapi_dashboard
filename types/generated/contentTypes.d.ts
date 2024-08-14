@@ -379,6 +379,8 @@ export interface ApiBlogBlog extends Schema.CollectionType {
     Description: Attribute.RichText & Attribute.Required;
     innerImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     slug: Attribute.String & Attribute.Required;
+    MetaDescription: Attribute.Text &
+      Attribute.DefaultTo<'Warehouzez meta description '>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
